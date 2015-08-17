@@ -1,0 +1,3 @@
+ez_summer_camp_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: EzSummerCampBundle:Default:index }

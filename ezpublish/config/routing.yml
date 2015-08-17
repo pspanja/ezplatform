@@ -1,3 +1,7 @@
+ez_summer_camp:
+    resource: "@EzSummerCampBundle/Resources/config/routing.yml"
+    prefix:   /
+
 login:
     path:   /login
     defaults:  { _controller: ezpublish.security.controller:loginAction }
