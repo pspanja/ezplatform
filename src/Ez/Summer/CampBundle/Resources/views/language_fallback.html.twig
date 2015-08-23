@@ -7,6 +7,9 @@ Languages:
 {% for searchHit in keyboards.searchHits %}
     <h3>Content #{{ searchHit.valueObject.id }}</h3>
     <h3>Matched translation: {{ searchHit.matchedTranslation }}</h3>
+    <h3>Main translation: {{ searchHit.valueObject.versionInfo.contentInfo.mainLanguageCode }}</h3>
+    <h3>Always available: {{ searchHit.valueObject.versionInfo.contentInfo.alwaysAvailable }}</h3>
+    <h3>Translations: {{ searchHit.valueObject.versionInfo.languageCodes|join(', ') }}</h3>
     <h3>Core: {{ searchHit.index }}</h3>
     <h1>
         {{ ez_render_field(
