@@ -1,3 +1,6 @@
 ez_summer_camp_homepage:
     path:     /hello/{name}
     defaults: { _controller: EzSummerCampBundle:Default:index }
+ez_summer_camp_language_fallback_demo:
+    path:     /keyboards
+    defaults: { _controller: EzSummerCampBundle:Default:languageFallbackDemo }

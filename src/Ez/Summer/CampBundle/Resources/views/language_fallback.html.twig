@@ -1,0 +1,42 @@
+Languages:
+
+{{ languageSettings.languages|join(', ') }}
+
+<hr/>
+
+{% for searchHit in keyboards.searchHits %}
+    <h3>Content #{{ searchHit.valueObject.id }}</h3>
+    <h3>Matched translation: {{ searchHit.matchedTranslation }}</h3>
+    <h3>Core: {{ searchHit.index }}</h3>
+    <h1>
+        {{ ez_render_field(
+            searchHit.valueObject,
+            'title',
+            {
+                'lang': searchHit.matchedTranslation,
+            }
+        ) }}
+    </h1>
+    <p>
+        price:
+        {{ ez_render_field(
+        searchHit.valueObject,
+        'price',
+        {
+            'lang': searchHit.matchedTranslation,
+        }
+        ) }}
+    </p>
+    <p>
+        URL:
+        {{ ez_render_field(
+            searchHit.valueObject,
+            'link',
+            {
+                'lang': searchHit.matchedTranslation,
+            }
+        ) }}
+    </p>
+<hr/>
+{% endfor %}
+
