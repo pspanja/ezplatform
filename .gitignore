@@ -23,3 +23,15 @@ composer.phar
 .settings/
 behat.yml
 .php_cs.cache
+/bin/doctrine-dbal
+/bin/security-checker
+/ezpublish/SymfonyRequirements.php
+/ezpublish/check.php
+/logs/
+/solr-webapp/
+/solr.multicore/core0/data/
+/solr.multicore/core1/data/
+/solr.multicore/core2/data/
+/solr.multicore/core3/data/
+/web/css/
+/web/js/
