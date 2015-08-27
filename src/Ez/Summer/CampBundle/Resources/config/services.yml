@@ -6,8 +6,21 @@ parameters:
 
     ezpublish.fieldType.indexable.ezurl.class: Ez\Summer\CampBundle\Core\FieldType\Url\SearchField
 
+    ezpublish.search.solr.query.content.criterion_visitor.ancestor.class: Ez\Summer\CampBundle\Core\Search\Solr\Query\Content\CriterionVisitor\Ancestor
+    ezpublish.search.solr.query.location.criterion_visitor.ancestor.class: Ez\Summer\CampBundle\Core\Search\Solr\Query\Location\CriterionVisitor\Ancestor
+
 services:
     ezpublish.fieldType.indexable.ezurl:
         class: %ezpublish.fieldType.indexable.ezurl.class%
         tags:
             - {name: ezpublish.fieldType.indexable, alias: ezurl}
+
+    ezpublish.search.solr.query.content.criterion_visitor.ancestor:
+        class: %ezpublish.search.solr.query.content.criterion_visitor.ancestor.class%
+        tags:
+            - {name: ezpublish.search.solr.query.content.criterion_visitor}
+
+    ezpublish.search.solr.query.location.criterion_visitor.ancestor:
+        class: %ezpublish.search.solr.query.location.criterion_visitor.ancestor.class%
+        tags:
+            - {name: ezpublish.search.solr.query.location.criterion_visitor}
