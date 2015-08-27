@@ -71,4 +71,33 @@ class DefaultController extends Controller
             )
         );
     }
+
+    public function urlCustomFieldSearchAction()
+    {
+        $languageSettings = array(
+            'languages' => array(),
+        );
+        $searchService = $this->get( 'ezpublish.api.service.search' );
+
+        $query = new Query();
+        $query->filter = new Criterion\LogicalAnd(
+            array(
+                new Criterion\ContentTypeIdentifier( 'test_product' ),
+                new Criterion\CustomField( 'test_product_link_value_id_s', Criterion\Operator::EQ, '69' )
+            )
+        );
+        $query->sortClauses = array(
+            new SortClause\ContentId( Query::SORT_ASC ),
+        );
+
+        $searchResult = $searchService->findContent( $query, $languageSettings );
+
+        return $this->render(
+            'EzSummerCampBundle::language_fallback.html.twig',
+            array(
+                'keyboards' => $searchResult,
+                'languageSettings' => $languageSettings
+            )
+        );
+    }
 }
