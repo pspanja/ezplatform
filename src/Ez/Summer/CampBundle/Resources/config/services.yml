@@ -4,7 +4,10 @@ parameters:
 
     ezpublish.fieldType.ezurl.class: Ez\Summer\CampBundle\API\Repository\Tests\FieldType\SearchableUrl
 
+    ezpublish.fieldType.indexable.ezurl.class: Ez\Summer\CampBundle\Core\FieldType\Url\SearchField
+
 services:
-#    ez_summer_camp.example:
-#        class: Ez\Summer\CampBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+    ezpublish.fieldType.indexable.ezurl:
+        class: %ezpublish.fieldType.indexable.ezurl.class%
+        tags:
+            - {name: ezpublish.fieldType.indexable, alias: ezurl}
