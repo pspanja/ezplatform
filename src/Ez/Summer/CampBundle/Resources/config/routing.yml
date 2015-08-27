@@ -4,3 +4,6 @@ ez_summer_camp_homepage:
 ez_summer_camp_language_fallback_demo:
     path:     /keyboards
     defaults: { _controller: EzSummerCampBundle:Default:languageFallbackDemo }
+ez_summer_camp_url_field_search:
+    path:     /url-search
+    defaults: { _controller: EzSummerCampBundle:Default:urlFieldSearch }
