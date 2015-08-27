@@ -2,6 +2,8 @@ parameters:
     ezpublish.core.io.tolerant_service.class: eZ\Summer\CampBundle\Override\ToleranterIOService
     ezpublish.search.solr.query.content.criterion_visitor.map_location_distance_range.class: eZ\Summer\CampBundle\Override\MapLocationDistanceRange
 
+    ezpublish.fieldType.ezurl.class: Ez\Summer\CampBundle\API\Repository\Tests\FieldType\SearchableUrl
+
 services:
 #    ez_summer_camp.example:
 #        class: Ez\Summer\CampBundle\Example
