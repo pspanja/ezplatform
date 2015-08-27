@@ -11,8 +11,12 @@ ez_search_engine_solr:
 ezpublish:
     repositories:
         demo_repository:
-            engine: legacy
-            connection: default
+            storage:
+                engine: legacy
+                connection: default
+            search:
+                engine: solr
+                connection: solr_test
 
     siteaccess:
         # Available siteaccesses
