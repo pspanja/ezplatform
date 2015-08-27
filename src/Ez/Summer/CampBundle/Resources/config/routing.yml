@@ -10,3 +10,6 @@ ez_summer_camp_url_field_search:
 ez_summer_camp_url_custom_field_search:
     path:     /url-custom-search
     defaults: { _controller: EzSummerCampBundle:Default:urlCustomFieldSearch }
+ez_summer_camp_ancestor_search:
+    path:     /ancestor-search
+    defaults: { _controller: EzSummerCampBundle:Default:ancestorSearch }

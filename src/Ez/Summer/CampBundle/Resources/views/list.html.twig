@@ -1,0 +1,4 @@
+
+{% for searchHit in searchResult.searchHits %}
+    <a href="{{ path( searchHit.valueObject ) }}">{{ searchHit.valueObject.contentInfo.name }}</a> &gt;
+{% endfor %}
