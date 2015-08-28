@@ -8,7 +8,7 @@
  *
  * @version //autogentag//
  */
-namespace eZ\Summer\CampBundle\Override;
+namespace Ez\Summer\CampBundle\Override;
 
 use eZ\Publish\Core\Search\Solr\Query\Content\CriterionVisitor\MapLocation;
 use eZ\Publish\Core\Search\Solr\Query\CriterionVisitor;
