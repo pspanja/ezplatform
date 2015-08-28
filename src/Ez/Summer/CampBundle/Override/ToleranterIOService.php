@@ -6,7 +6,7 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Summer\CampBundle\Override;
+namespace Ez\Summer\CampBundle\Override;
 
 use eZ\Publish\Core\IO\TolerantIOService;
 use eZ\Publish\Core\IO\Exception\BinaryFileNotFoundException;
